@@ -9,6 +9,7 @@ import { Lock, Mail, UserPlus, LogIn } from "lucide-react";
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [fullName, setFullName] = useState("");
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [email, setEmail] = useState("");
@@ -67,27 +68,15 @@ const Auth = () => {
             <TabsContent value="signin">
               <form onSubmit={handleSignIn} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="signin-nom">Nom</Label>
+                  <Label htmlFor="signin-fullname">Nom Complet</Label>
                   <Input
-                    id="signin-nom"
+                    id="signin-fullname"
                     type="text"
-                    placeholder="Nom"
-                    value={nom}
-                    onChange={(e) => setNom(e.target.value)}
+                    placeholder="Nom Complet"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
                     required
-                    maxLength={100}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="signin-prenom">Prénom</Label>
-                  <Input
-                    id="signin-prenom"
-                    type="text"
-                    placeholder="Prénom"
-                    value={prenom}
-                    onChange={(e) => setPrenom(e.target.value)}
-                    required
-                    maxLength={100}
+                    maxLength={200}
                   />
                 </div>
                 <div className="space-y-2">
