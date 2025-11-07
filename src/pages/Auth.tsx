@@ -105,27 +105,15 @@ const Auth = () => {
             <TabsContent value="signup">
               <form onSubmit={handleSignUp} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="signup-nom">Nom</Label>
+                  <Label htmlFor="signup-fullname">Nom Complet</Label>
                   <Input
-                    id="signup-nom"
+                    id="signup-fullname"
                     type="text"
-                    placeholder="Nom"
-                    value={nom}
-                    onChange={(e) => setNom(e.target.value)}
+                    placeholder="Nom Complet"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
                     required
-                    maxLength={100}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="signup-prenom">Prénom</Label>
-                  <Input
-                    id="signup-prenom"
-                    type="text"
-                    placeholder="Prénom"
-                    value={prenom}
-                    onChange={(e) => setPrenom(e.target.value)}
-                    required
-                    maxLength={100}
+                    maxLength={200}
                   />
                 </div>
                 <div className="space-y-2">
@@ -139,22 +127,6 @@ const Auth = () => {
                     required
                     maxLength={50}
                   />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="signup-email">Email</Label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input
-                      id="signup-email"
-                      type="email"
-                      placeholder="votre@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="pl-10"
-                      required
-                      maxLength={255}
-                    />
-                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="signup-password">Mot de passe</Label>
