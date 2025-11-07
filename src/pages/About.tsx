@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Target, Eye, Heart, Users } from "lucide-react";
-import presidentImage from "@/assets/club-president.jpg";
+import presidentImage from "@/assets/president-photo.jpg";
 
 const About = () => {
   const values = [
@@ -49,12 +49,9 @@ const About = () => {
               </Avatar>
               <div className="flex-1 text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-2">Nom du Président</h2>
-                <p className="text-primary font-semibold mb-4">Président du Club</p>
+                <p className="text-primary font-semibold mb-4">Economics & Business CPGE Student | Initiative-Taker & Impact-Maker</p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Passionné par la science et la technologie depuis mon jeune âge, j'ai rejoint 
-                  ce club pour partager ma passion et inspirer d'autres jeunes à explorer le monde 
-                  fascinant de l'innovation. Ensemble, nous créons un environnement où chaque membre 
-                  peut développer ses compétences, réaliser ses projets et atteindre l'excellence.
+                  Helping Solve Real-World Business Challenges through Innovation & Purposeful Leadership.
                 </p>
               </div>
             </div>
