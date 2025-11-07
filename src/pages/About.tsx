@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Target, Eye, Heart, Users } from "lucide-react";
+import presidentImage from "@/assets/club-president.jpg";
 
 const About = () => {
   const values = [
@@ -36,6 +38,28 @@ const About = () => {
             à l'épanouissement des talents scientifiques et techniques des jeunes.
           </p>
         </div>
+
+        {/* Profile Section */}
+        <Card className="mb-16 shadow-strong overflow-hidden">
+          <CardContent className="p-0">
+            <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+              <Avatar className="w-32 h-32 md:w-40 md:h-40 ring-4 ring-primary/20">
+                <AvatarImage src={presidentImage} alt="Président du Club" />
+                <AvatarFallback className="text-4xl">PC</AvatarFallback>
+              </Avatar>
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-3xl font-bold mb-2">Nom du Président</h2>
+                <p className="text-primary font-semibold mb-4">Président du Club</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Passionné par la science et la technologie depuis mon jeune âge, j'ai rejoint 
+                  ce club pour partager ma passion et inspirer d'autres jeunes à explorer le monde 
+                  fascinant de l'innovation. Ensemble, nous créons un environnement où chaque membre 
+                  peut développer ses compétences, réaliser ses projets et atteindre l'excellence.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Mission & Vision */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
