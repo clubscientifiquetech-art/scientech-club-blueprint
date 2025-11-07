@@ -11,8 +11,9 @@ import { z } from "zod";
 const signupSchema = z.object({
   fullName: z.string().trim().min(2, "Le nom complet doit contenir au moins 2 caractères").max(100),
   codeMassar: z.string().trim().min(1, "Le code massar est requis").max(50),
-  password: z.string().min(6, "Le mot de passe doit contenir au moins 6 caractères").max(72),
+  email: z.string().trim().email("Adresse email invalide").max(255),
   phone: z.string().trim().min(10, "Numéro de téléphone invalide").max(20),
+  password: z.string().min(6, "Le mot de passe doit contenir au moins 6 caractères").max(72),
 });
 
 const signinSchema = z.object({
@@ -26,8 +27,9 @@ const Join = () => {
   const [signupData, setSignupData] = useState({
     fullName: "",
     codeMassar: "",
-    password: "",
+    email: "",
     phone: "",
+    password: "",
   });
   const [signinData, setSigninData] = useState({
     fullName: "",
@@ -60,8 +62,9 @@ const Join = () => {
       setSignupData({
         fullName: "",
         codeMassar: "",
-        password: "",
+        email: "",
         phone: "",
+        password: "",
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -188,6 +191,34 @@ const Join = () => {
                         />
                       </div>
                       <div className="space-y-2">
+                        <Label htmlFor="signup-email">Email *</Label>
+                        <Input
+                          id="signup-email"
+                          type="email"
+                          placeholder="exemple@email.com"
+                          value={signupData.email}
+                          onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
+                          required
+                          maxLength={255}
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="signup-phone">Téléphone *</Label>
+                        <div className="relative">
+                          <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                          <Input
+                            id="signup-phone"
+                            type="tel"
+                            placeholder="+212 XXX-XXXXXX"
+                            value={signupData.phone}
+                            onChange={(e) => setSignupData({ ...signupData, phone: e.target.value })}
+                            className="pl-10"
+                            required
+                            maxLength={20}
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
                         <Label htmlFor="signup-password">Mot de passe *</Label>
                         <div className="relative">
                           <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -206,22 +237,6 @@ const Join = () => {
                         <p className="text-xs text-muted-foreground">
                           Minimum 6 caractères
                         </p>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="signup-phone">Téléphone *</Label>
-                        <div className="relative">
-                          <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                          <Input
-                            id="signup-phone"
-                            type="tel"
-                            placeholder="+212 XXX-XXXXXX"
-                            value={signupData.phone}
-                            onChange={(e) => setSignupData({ ...signupData, phone: e.target.value })}
-                            className="pl-10"
-                            required
-                            maxLength={20}
-                          />
-                        </div>
                       </div>
                       <Button type="submit" variant="hero" className="w-full" size="lg" disabled={isLoading}>
                         {isLoading ? "Inscription..." : "S'inscrire"}
