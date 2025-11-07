@@ -10,8 +10,11 @@ import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
 const joinSchema = z.object({
-  name: z.string().trim().min(2, "Le nom doit contenir au moins 2 caractères").max(100),
+  nom: z.string().trim().min(2, "Le nom doit contenir au moins 2 caractères").max(100),
+  prenom: z.string().trim().min(2, "Le prénom doit contenir au moins 2 caractères").max(100),
+  codeMassar: z.string().trim().min(1, "Le code massar est requis").max(50),
   email: z.string().trim().email("Email invalide").max(255),
+  password: z.string().min(6, "Le mot de passe doit contenir au moins 6 caractères").max(72),
   phone: z.string().trim().min(10, "Numéro de téléphone invalide").max(20),
   message: z.string().trim().max(500, "Le message ne peut pas dépasser 500 caractères").optional(),
   activities: z.array(z.string()).min(1, "Sélectionnez au moins une activité"),
@@ -20,8 +23,11 @@ const joinSchema = z.object({
 const Join = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: "",
+    nom: "",
+    prenom: "",
+    codeMassar: "",
     email: "",
+    password: "",
     phone: "",
     message: "",
     activities: [] as string[],
@@ -63,8 +69,11 @@ const Join = () => {
       });
 
       setFormData({
-        name: "",
+        nom: "",
+        prenom: "",
+        codeMassar: "",
         email: "",
+        password: "",
         phone: "",
         message: "",
         activities: [],
@@ -130,14 +139,38 @@ const Join = () => {
                 <h2 className="text-2xl font-bold mb-6">Formulaire d'Inscription</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">Nom Complet *</Label>
+                    <Label htmlFor="nom">Nom *</Label>
                     <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Votre nom"
+                      id="nom"
+                      value={formData.nom}
+                      onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
+                      placeholder="Nom"
                       required
                       maxLength={100}
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="prenom">Prénom *</Label>
+                    <Input
+                      id="prenom"
+                      value={formData.prenom}
+                      onChange={(e) => setFormData({ ...formData, prenom: e.target.value })}
+                      placeholder="Prénom"
+                      required
+                      maxLength={100}
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="codeMassar">Code Massar *</Label>
+                    <Input
+                      id="codeMassar"
+                      value={formData.codeMassar}
+                      onChange={(e) => setFormData({ ...formData, codeMassar: e.target.value })}
+                      placeholder="Code Massar"
+                      required
+                      maxLength={50}
                     />
                   </div>
 
@@ -152,6 +185,23 @@ const Join = () => {
                       required
                       maxLength={255}
                     />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="password">Mot de passe *</Label>
+                    <Input
+                      id="password"
+                      type="password"
+                      value={formData.password}
+                      onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                      placeholder="••••••••"
+                      required
+                      minLength={6}
+                      maxLength={72}
+                    />
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Minimum 6 caractères
+                    </p>
                   </div>
 
                   <div>
