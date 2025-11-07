@@ -1,27 +1,11 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, LogOut, User } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, User } from "lucide-react";
+import { useState } from "react";
 import { Button } from "./ui/button";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
-import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState<SupabaseUser | null>(null);
   const location = useLocation();
-  const navigate = useNavigate();
-  const { toast } = useToast();
-
-  useEffect(() => {
-    supabase.auth.onAuthStateChange((event, session) => {
-      setUser(session?.user ?? null);
-    });
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-    });
-  }, []);
 
   const navLinks = [
     { path: "/", label: "Accueil" },
@@ -33,23 +17,6 @@ const Navbar = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-
-  const handleLogout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      toast({
-        title: "Erreur de déconnexion",
-        description: error.message,
-        variant: "destructive",
-      });
-      return;
-    }
-    toast({
-      title: "Déconnexion réussie",
-      description: "À bientôt!",
-    });
-    navigate("/");
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border shadow-soft">
@@ -78,19 +45,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            {user ? (
-              <Button variant="outline" size="sm" className="ml-4" onClick={handleLogout}>
-                <LogOut className="w-4 h-4 mr-2" />
-                Déconnexion
+            <Link to="/auth">
+              <Button variant="hero" size="sm" className="ml-4">
+                <User className="w-4 h-4 mr-2" />
+                Connexion
               </Button>
-            ) : (
-              <Link to="/auth">
-                <Button variant="hero" size="sm" className="ml-4">
-                  <User className="w-4 h-4 mr-2" />
-                  Connexion
-                </Button>
-              </Link>
-            )}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,19 +80,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            {user ? (
-              <Button variant="outline" className="w-full mt-2" onClick={() => { handleLogout(); setIsOpen(false); }}>
-                <LogOut className="w-4 h-4 mr-2" />
-                Déconnexion
+            <Link to="/auth" onClick={() => setIsOpen(false)}>
+              <Button variant="hero" className="w-full mt-2">
+                <User className="w-4 h-4 mr-2" />
+                Connexion
               </Button>
-            ) : (
-              <Link to="/auth" onClick={() => setIsOpen(false)}>
-                <Button variant="hero" className="w-full mt-2">
-                  <User className="w-4 h-4 mr-2" />
-                  Connexion
-                </Button>
-              </Link>
-            )}
+            </Link>
           </div>
         )}
       </div>
