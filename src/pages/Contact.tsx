@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
@@ -46,7 +46,6 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, label: "Facebook", link: "#" },
     { icon: Instagram, label: "Instagram", link: "#" },
     { icon: Linkedin, label: "LinkedIn", link: "#" },
   ];
