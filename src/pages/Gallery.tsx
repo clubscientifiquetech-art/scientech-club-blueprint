@@ -72,14 +72,11 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        
-
         {/* Coming Soon Message */}
-        <Card className="mt-12 shadow-medium">
-          <div className="p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-2">Plus de contenu bientôt !</h3>
-            <p className="text-muted-foreground">
+        <Card className="shadow-medium">
+          <div className="p-12 text-center">
+            <h2 className="text-4xl font-bold mb-4">Coming Soon</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Nous ajoutons régulièrement de nouvelles photos et vidéos de nos activités. 
               Revenez prochainement pour découvrir plus de moments mémorables.
             </p>
