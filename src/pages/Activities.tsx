@@ -84,7 +84,9 @@ const Activities = () => {
                     {/* Members */}
                     <div className="flex items-center gap-2 text-sm">
                       <Users className="w-5 h-5 text-primary" />
-                      
+                      <span className="text-muted-foreground">
+                        Plus de {30 + index * 20} membres actifs
+                      </span>
                     </div>
                   </div>
                 </CardContent>
