@@ -18,7 +18,7 @@ const Activities = () => {
     icon: Brain,
     color: "from-primary to-primary-glow",
     description: "Développez vos capacités de réflexion stratégique et de résolution de problèmes à travers les échecs et le Rubik's cube.",
-    features: ["Tournois d'échecs mensuels", "Sessions d'entraînement avec des maîtres", "Compétitions de Rubik's cube speed-solving", "Ateliers de stratégie et tactique"],
+    features: ["Tournois d'échecs mensuels", "Sessions d'entraînement avec des maîtres", "Compétitions de Rubik's cube speed-solving", "Ateliers de stratégie et tactique", "Ateliers de formations", "Ateliers de suivre", "Ateliers pour jouer", "Des compétition locale, nationale ou même internationale"],
     schedule: "Tous les mardis et jeudis, 17h-19h"
   }, {
     title: "Prix du meilleur TIPE",
@@ -70,7 +70,12 @@ const Activities = () => {
                         <h3 className="font-semibold">Ce que nous offrons</h3>
                       </div>
                       <ul className="space-y-2">
-                        {activity.features.map((feature, idx) => {})}
+                        {activity.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
 
