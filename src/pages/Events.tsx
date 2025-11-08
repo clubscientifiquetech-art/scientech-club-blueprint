@@ -20,7 +20,7 @@ const Events = () => {
       date: "20-22 Avril 2024",
       time: "Vendredi 18h - Dimanche 18h",
       location: "Espace Innovation",
-      category: "Innovation",
+      category: "Prix du meilleur TIPE",
       participants: "45/50",
       description: "Développez un projet innovant en 48 heures. Mentorat, pizza et prix garantis !",
       status: "Places limitées",
@@ -57,7 +57,7 @@ const Events = () => {
     {
       title: "Expo Projets Innovation",
       date: "5 Mars 2024",
-      category: "Innovation",
+      category: "Prix du meilleur TIPE",
       participants: "15 projets présentés",
     },
     {
@@ -72,7 +72,7 @@ const Events = () => {
     switch (category) {
       case "Échecs":
         return "bg-primary";
-      case "Innovation":
+      case "Prix du meilleur TIPE":
         return "bg-accent";
       case "Robotique":
         return "bg-primary-glow";

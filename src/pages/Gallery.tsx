@@ -20,7 +20,7 @@ const Gallery = () => {
     },
     {
       title: "Hackathon Innovation",
-      category: "Innovation",
+      category: "Prix du meilleur TIPE",
       image: innovationImage,
       date: "Février 2024",
       photos: 15,
@@ -44,7 +44,7 @@ const Gallery = () => {
     },
     {
       title: "Expo Projets Innovants",
-      category: "Innovation",
+      category: "Prix du meilleur TIPE",
       image: innovationImage,
       date: "Novembre 2023",
       photos: 14,
@@ -64,7 +64,7 @@ const Gallery = () => {
     switch (category) {
       case "Échecs":
         return "bg-primary";
-      case "Innovation":
+      case "Prix du meilleur TIPE":
         return "bg-accent";
       case "Robotique":
         return "bg-primary-glow";
