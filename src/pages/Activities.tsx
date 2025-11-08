@@ -11,10 +11,10 @@ const Activities = () => {
     color: "from-primary-glow to-cyan-400",
     description: "Construisez, programmez et pilotez des robots pour participer à des compétitions nationales et internationales.",
     features: ["Ateliers de formations", "Ateliers de suivre", "Des compétition locale, nationale ou même internationale"],
-    precious: "Développement de compétences techniques avancées en programmation et électronique",
-    partners: ["Arduino", "Raspberry Pi Foundation", "FIRST Robotics"],
-    schedule: "Lundis et samedis, 15h-18h",
-    members: 45
+    precious: "coming soon",
+    partners: "coming soon",
+    schedule: "coming soon",
+    members: "coming soon"
   }, {
     title: "Échecs & Rubik's Cube",
     image: chessImage,
@@ -22,10 +22,10 @@ const Activities = () => {
     color: "from-primary to-primary-glow",
     description: "Développez vos capacités de réflexion stratégique et de résolution de problèmes à travers les échecs et le Rubik's cube.",
     features: ["Ateliers de formations", "Ateliers de suivre", "Ateliers pour jouer", "Des compétition locale, nationale ou même internationale"],
-    precious: "Amélioration de la concentration et de la pensée analytique",
-    partners: ["Fédération Internationale des Échecs", "World Cube Association"],
-    schedule: "Tous les mardis et jeudis, 17h-19h",
-    members: 38
+    precious: "coming soon",
+    partners: "coming soon",
+    schedule: "coming soon",
+    members: "coming soon"
   }, {
     title: "Prix du meilleur TIPE",
     image: tipeImage,
@@ -33,10 +33,10 @@ const Activities = () => {
     color: "from-accent to-orange-400",
     description: "Participez à la compétition du meilleur TIPE et présentez vos travaux de recherche scientifique devant un jury d'experts.",
     features: ["Accompagnement dans la réalisation du TIPE", "Sessions de préparation à la présentation orale", "Accès aux équipements de recherche", "Récompenses et reconnaissances académiques"],
-    precious: "Excellence académique et préparation aux concours d'ingénieur",
-    partners: ["Grandes Écoles", "Laboratoires de recherche"],
-    schedule: "Mercredis et vendredis, 16h-20h",
-    members: 28
+    precious: "coming soon",
+    partners: "coming soon",
+    schedule: "coming soon",
+    members: "coming soon"
   }];
   return <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
@@ -94,7 +94,7 @@ const Activities = () => {
                         <Sparkles className="w-5 h-5 text-primary" />
                         <h3 className="font-semibold">Précieux</h3>
                       </div>
-                      <p className="text-muted-foreground text-sm">{activity.precious}</p>
+                      <p className="text-muted-foreground text-sm italic">{activity.precious}</p>
                     </div>
 
                     {/* Partners */}
@@ -103,27 +103,21 @@ const Activities = () => {
                         <Handshake className="w-5 h-5 text-primary" />
                         <h3 className="font-semibold">Partenaires</h3>
                       </div>
-                      <div className="flex flex-wrap gap-2">
-                        {activity.partners.map((partner, idx) => (
-                          <span key={idx} className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
-                            {partner}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="text-muted-foreground text-sm italic">{activity.partners}</p>
                     </div>
 
                     {/* Schedule */}
                     <div className="flex items-center gap-2 text-sm">
                       <Calendar className="w-5 h-5 text-primary" />
                       <span className="font-medium">Horaires:</span>
-                      <span className="text-muted-foreground">{activity.schedule}</span>
+                      <span className="text-muted-foreground italic">{activity.schedule}</span>
                     </div>
 
                     {/* Members */}
                     <div className="flex items-center gap-2 text-sm">
                       <Users className="w-5 h-5 text-primary" />
                       <span className="font-medium">Membres:</span>
-                      <span className="text-muted-foreground">{activity.members} participants actifs</span>
+                      <span className="text-muted-foreground italic">{activity.members}</span>
                     </div>
                   </div>
                 </CardContent>
