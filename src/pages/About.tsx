@@ -51,14 +51,14 @@ const About = () => {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-2">Ihab Farahat Sherif – Président du Club Scientifique et Technologique (CPGE Ibn Taymiya)</h2>
-                <p className="text-primary font-semibold mb-4">Étudiant en filière *ECT au CPGE Ibn Taymiya, **Ihab Farahat Sherif* allie compétences techniques, esprit d’innovation et sens du leadership.
+                <p className="text-primary font-semibold mb-4">Étudiant en filière ECT au CPGE Ibn Taymiya, Ihab Farahat Sherif allie compétences techniques, esprit d'innovation et sens du leadership.
 
               </p>
-                <p className="text-muted-foreground leading-relaxed">Certifié par des institutions internationales telles que *IBM,LinkedIn, **Project Management Institute* et *Cisco* ..., il s’engage à promouvoir l’excellence, la collaboration et la gestion efficace de projets au sein du club.
+                <p className="text-muted-foreground leading-relaxed">Certifié par des institutions internationales telles que IBM, LinkedIn, Project Management Institute et Cisco ..., il s'engage à promouvoir l'excellence, la collaboration et la gestion efficace de projets au sein du club.
 
 
-En tant que président, il œuvre à créer un environnement où chaque étudiant peut *proposer, expérimenter et agir, tout en développant ses **compétences personnelles et professionnelles*.
-Son objectif : faire du club un espace d’apprentissage dynamique, où *rigueur académique et créativité* se rencontrent pour inspirer la prochaine génération de leaders.</p>
+En tant que président, il œuvre à créer un environnement où chaque étudiant peut proposer, expérimenter et agir, tout en développant ses compétences personnelles et professionnelles.
+Son objectif : faire du club un espace d'apprentissage dynamique, où rigueur académique et créativité se rencontrent pour inspirer la prochaine génération de leaders.</p>
               </div>
             </div>
           </CardContent>
