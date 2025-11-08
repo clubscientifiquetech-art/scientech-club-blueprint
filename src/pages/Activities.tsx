@@ -97,33 +97,27 @@ const Activities = () => {
                     </div>
 
                     {/* Partners - Hidden for Prix du meilleur TIPE */}
-                    {activity.title !== "Prix du meilleur TIPE" && (
-                      <div>
+                    {activity.title !== "Prix du meilleur TIPE" && <div>
                         <div className="flex items-center gap-2 mb-2">
                           <Handshake className="w-5 h-5 text-primary" />
                           <h3 className="font-semibold">Partenaires</h3>
                         </div>
                         <p className="text-muted-foreground text-sm italic">{activity.partners}</p>
-                      </div>
-                    )}
+                      </div>}
 
                     {/* Schedule - Hidden for Prix du meilleur TIPE */}
-                    {activity.title !== "Prix du meilleur TIPE" && (
-                      <div className="flex items-center gap-2 text-sm">
+                    {activity.title !== "Prix du meilleur TIPE" && <div className="flex items-center gap-2 text-sm">
                         <Calendar className="w-5 h-5 text-primary" />
                         <span className="font-medium">Horaires:</span>
                         <span className="text-muted-foreground italic">{activity.schedule}</span>
-                      </div>
-                    )}
+                      </div>}
 
                     {/* Members - Hidden for Prix du meilleur TIPE */}
-                    {activity.title !== "Prix du meilleur TIPE" && (
-                      <div className="flex items-center gap-2 text-sm">
+                    {activity.title !== "Prix du meilleur TIPE" && <div className="flex items-center gap-2 text-sm">
                         <Users className="w-5 h-5 text-primary" />
                         <span className="font-medium">Membres:</span>
                         <span className="text-muted-foreground italic">{activity.members}</span>
-                      </div>
-                    )}
+                      </div>}
                   </div>
                 </CardContent>
               </div>
@@ -136,7 +130,7 @@ const Activities = () => {
             <img src={ctaBackground} alt="Chess and Technology" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/60" />
           </div>
-          <div className="relative text-center p-12">
+          <div className="relative text-center p-12 bg-[#282222]/[0.39]">
             <h2 className="text-3xl font-bold mb-4">
               Prêt à Commencer ?
             </h2>
