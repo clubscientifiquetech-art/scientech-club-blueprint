@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Target, Eye, Heart, Users } from "lucide-react";
-import presidentImage from "@/assets/president-photo.jpg";
+import presidentImage from "@/assets/ihabe-president.jpg";
 
 const About = () => {
   const values = [
