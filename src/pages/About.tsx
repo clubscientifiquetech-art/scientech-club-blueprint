@@ -43,12 +43,12 @@ const About = () => {
         <Card className="mb-16 shadow-strong overflow-hidden">
           <CardContent className="p-0">
             <div className="flex flex-col md:flex-row items-center gap-8 p-8">
-              <Avatar className="w-32 h-32 md:w-40 md:h-40 ring-4 ring-primary/20">
+              <Avatar className="w-24 h-24 md:w-32 md:h-32 ring-4 ring-primary/20">
                 <AvatarImage src={presidentImage} alt="Président du Club" />
-                <AvatarFallback className="text-4xl">PC</AvatarFallback>
+                <AvatarFallback className="text-2xl">IF</AvatarFallback>
               </Avatar>
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold mb-2">Nom du Président</h2>
+                <h2 className="text-3xl font-bold mb-2">Ihabe Farahat Sherif</h2>
                 <p className="text-primary font-semibold mb-4">Economics & Business CPGE Student | Initiative-Taker & Impact-Maker</p>
                 <p className="text-muted-foreground leading-relaxed">
                   Helping Solve Real-World Business Challenges through Innovation & Purposeful Leadership.
