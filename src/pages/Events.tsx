@@ -78,23 +78,16 @@ const Events = () => {
           </p>
         </div>
 
-        {/* Upcoming Events */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">Événements à Venir</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {upcomingEvents.map((event, index) => <Card key={index} className="hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
-                
-              </Card>)}
+        {/* Coming Soon Message */}
+        <Card className="shadow-medium">
+          <div className="p-12 text-center">
+            <h2 className="text-4xl font-bold mb-4">Coming Soon</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Nous préparons une liste complète d'événements passionnants. 
+              Revenez prochainement pour découvrir nos prochaines activités et compétitions.
+            </p>
           </div>
-        </div>
-
-        {/* Past Events */}
-        <div>
-          <h2 className="text-3xl font-bold mb-8">Événements Passés</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pastEvents.map((event, index) => {})}
-          </div>
-        </div>
+        </Card>
       </div>
     </div>;
 };
