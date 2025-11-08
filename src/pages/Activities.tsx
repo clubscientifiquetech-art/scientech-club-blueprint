@@ -11,7 +11,7 @@ const Activities = () => {
     color: "from-primary-glow to-cyan-400",
     description: "Construisez, programmez et pilotez des robots pour participer à des compétitions nationales et internationales.",
     features: ["Ateliers de formations", "Ateliers de suivre", "Des compétition locale, nationale ou même internationale"],
-    precious: "coming soon",
+    precious: "Prix Précieux",
     partners: "l'association ATDTech",
     schedule: "coming soon",
     members: "Entre 30 et 40 élèves"
@@ -22,7 +22,7 @@ const Activities = () => {
     color: "from-primary to-primary-glow",
     description: "Développez vos capacités de réflexion stratégique et de résolution de problèmes à travers les échecs et le Rubik's cube.",
     features: ["Ateliers de formations", "Ateliers de suivre", "Ateliers pour jouer", "Des compétition locale, nationale ou même internationale"],
-    precious: "coming soon",
+    precious: "Prix Précieux",
     partners: "coming soon",
     schedule: "coming soon",
     members: "coming soon"
@@ -32,7 +32,7 @@ const Activities = () => {
     icon: Award,
     color: "from-accent to-orange-400",
     description: "Participez à la compétition du meilleur TIPE et présentez vos travaux de recherche scientifique devant un jury d'experts.",
-    features: ["Accompagnement dans la réalisation du TIPE", "Sessions de préparation à la présentation orale", "Accès aux équipements de recherche", "Récompenses et reconnaissances académiques"],
+    features: ["Ateliers de formations", "Ateliers de suivre", "Des compétition locale, nationale ou même internationale"],
     precious: "coming soon",
     partners: "coming soon",
     schedule: "coming soon",
@@ -92,7 +92,7 @@ const Activities = () => {
                         <Sparkles className="w-5 h-5 text-primary" />
                         <h3 className="font-semibold">Précieux</h3>
                       </div>
-                      
+                      <p className="text-muted-foreground text-sm italic">{activity.precious}</p>
                     </div>
 
                     {/* Partners */}
