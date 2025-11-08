@@ -50,10 +50,8 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold mb-2">Ihab Farahat Sherif – Président du Club Scientifique et Technologique (CPGE Ibn Taymiya)</h2>
-                <p className="text-primary font-semibold mb-4">Étudiant en filière ECT au CPGE Ibn Taymiya, Ihab Farahat Sherif allie compétences techniques, esprit d'innovation et sens du leadership.
-
-              </p>
+                <h2 className="text-3xl font-bold mb-2">Ihabe Farahat Sherif – Président du Club Scientifique et Technologique </h2>
+                <p className="text-primary font-semibold mb-4">Étudiant en filière ECT au CPGE Ibn Taymiya, Ihabe Farahat Sherif allie compétences techniques, esprit d'innovation et sens du leadership.</p>
                 <p className="text-muted-foreground leading-relaxed">Certifié par des institutions internationales telles que IBM, LinkedIn, Project Management Institute et Cisco ..., il s'engage à promouvoir l'excellence, la collaboration et la gestion efficace de projets au sein du club.
 
 
