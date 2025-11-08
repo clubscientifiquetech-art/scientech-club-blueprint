@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">CST</span>
               </div>
-              <span className="font-bold text-lg">Club Scientifique e</span>
+              <span className="font-bold text-lg">Club Scientifique et Technologique</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Stimuler la créativité et l'innovation chez les jeunes esprits
