@@ -131,10 +131,10 @@ const Activities = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/60" />
           </div>
           <div className="relative text-center p-12 bg-[#282222]/[0.39]">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 text-white">
               Prêt à Commencer ?
             </h2>
-            <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
               Rejoignez-nous et découvrez toutes nos activités passionnantes
             </p>
             <a href="/join">
