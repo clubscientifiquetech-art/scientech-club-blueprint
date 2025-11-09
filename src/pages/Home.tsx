@@ -138,7 +138,7 @@ const Home = () => {
           <h2 className="text-4xl font-bold text-black mb-6">
             Prêt à Rejoindre l'Aventure ?
           </h2>
-          <p className="text-xl text-black/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black/90 mb-8 max-w-2xl mx-auto font-bold">
             Devenez membre du Club Scientifique et Technologique et participez à des 
             projets innovants, des compétitions passionnantes et bien plus encore.
           </p>
