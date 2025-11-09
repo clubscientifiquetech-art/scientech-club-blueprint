@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Target, Eye, Heart, Users, Linkedin } from "lucide-react";
-import presidentImage from "@/assets/ihabe-president.png";
+import presidentImage from "@/assets/president-new.png";
 const About = () => {
   const values = [{
     icon: Target,
